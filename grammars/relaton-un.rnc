@@ -4,6 +4,7 @@ DocumentType = "recommendation" | "plenary" | "addendum" | "communication" | "co
 
     editorialgroup = element editorialgroup {
       committee+
+        }
 
 BibDataExtensionType =
   attribute schema-version { text }?,
