@@ -2,22 +2,14 @@ include "biblio-standoc.rnc" {
 DocumentType = "recommendation" | "plenary" | "addendum" | "communication" | "corrigendum" |
     "reissue" | "agenda" | "budgetary" | "sec-gen-notes" | "expert-report" | "resolution"
 
-    editorialgroup = element editorialgroup {
-      committee+
-        }
-
 BibDataExtensionType =
   attribute schema-version { text }?,
-    doctype?, docsubtype?, submissionlanguage*, editorialgroup?, ics*, distribution?, session?, job_number?
+    doctype?, docsubtype?, submissionlanguage*, ics*, distribution?, session?, job_number?
 
 }
 
 session = element session {
   session-number?, session-date?, item-number*, item-name*, subitem-name*, collaborator?, agenda-id?, item-footnote?
-}
-
-committee = element committee { 
-  text
 }
 
 session-number = element number { text }
