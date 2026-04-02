@@ -2,11 +2,10 @@ include "biblio-standoc.rnc" {
 DocumentType = "recommendation" | "plenary" | "addendum" | "communication" | "corrigendum" |
     "reissue" | "agenda" | "budgetary" | "sec-gen-notes" | "expert-report" | "resolution"
 
-BibDataExtensionType =
-  attribute schema-version { text }?,
-    doctype?, docsubtype?, submissionlanguage*, ics*, distribution?, session?, job_number?
-
 }
+
+BibDataExtensionType &=
+    submissionlanguage*, distribution?, session?, job_number?
 
 session = element session {
   session-number?, session-date?, item-number*, item-name*, subitem-name*, collaborator?, agenda-id?, item-footnote?
